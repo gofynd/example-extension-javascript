@@ -63,7 +63,14 @@ export default {
     fetchApplications() {
       this.pageLoading = true;
       MainService.getAllApplications()
-        .then(({ data }) => {
+        .then(response => {
+          if (response.ok) {
+            return response.json();
+          } else {
+            throw new Error(`Request failed with status: ${response.status}`);
+          }
+        })
+        .then(data => {
           this.all_applications = data.items;
           this.applications_list = data.items;
           this.applications_list.map((ele) => {

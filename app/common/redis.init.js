@@ -1,7 +1,7 @@
 'use strict';
 
 const Redis = require('ioredis');
-const config = require('../config');
+const REDIS_HOST = process.env.REDIS_HOST || "redis://localhost:6379/0"
 
 function connect(name, uri) {
   const db = new Redis(uri, {
@@ -33,6 +33,6 @@ function connect(name, uri) {
   return db;
 }
 
-const hostRedis = connect('Host Read Write', config.redis.host);
+const hostRedis = connect('Host Read Write', REDIS_HOST);
 
 module.exports = { appRedis: hostRedis };
