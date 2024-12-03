@@ -1,11 +1,11 @@
 const express = require('express');
-jest.mock("@gofynd/fdk-extension-javascript/express/storage", () => {
+jest.mock('@gofynd/fdk-extension-javascript/express/storage', () => {
     return {
-      SQLiteStorage: jest.fn().mockImplementation(() => ({})),
+        SQLiteStorage: jest.fn().mockImplementation(() => ({})),
     };
-  });
+});
 // Write your own jest init
-jest.mock("@gofynd/fdk-extension-javascript/express", jest.fn(() => {
+jest.mock('@gofynd/fdk-extension-javascript/express', jest.fn(() => {
     return {
         setupFdk: function () {
             return {
@@ -13,7 +13,7 @@ jest.mock("@gofynd/fdk-extension-javascript/express", jest.fn(() => {
                     next();
                 },
                 platformApiRoutes: express.Router()
-            }
+            };
         }
-    }
-}))
+    };
+}));

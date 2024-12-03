@@ -20,7 +20,7 @@ describe('Product Routes', () => {
 
   it('GET /*: Fallback route', async () => {
     const res = await request.get('/test');
-    expect(res.headers['content-type']).toContain("text/html");
+    expect(res.headers['content-type']).toContain('text/html');
   });
 
   it('GET /api/products: should handle errors in the product list route', async () => {

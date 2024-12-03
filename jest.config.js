@@ -21,10 +21,10 @@ module.exports = {
         '!**/test/**',
         '!**/jest.config.js',
         '!**/index.js',
-        "!**/coverage/**",
-        "!**/coverage_output.js/**",
-        "!**/coverage_output.json/**",
-        "!**/start-dev.js"
+        '!**/coverage/**',
+        '!**/coverage_output.js/**',
+        '!**/coverage_output.json/**',
+        '!**/start-dev.js'
     ],
     bail: true
 };

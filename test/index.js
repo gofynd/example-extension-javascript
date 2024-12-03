@@ -6,7 +6,7 @@ describe('Test server', () => {
         process.env.PORT = mockPort;
         const app = server();
         app.listen = jest.fn();
-        app.listen(mockPort, () => {});
+        app.listen(mockPort, () => { });
         expect(app.listen).toHaveBeenCalledWith(mockPort, expect.any(Function));
     });
 });
