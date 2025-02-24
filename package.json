@@ -15,12 +15,14 @@
   },
   "dependencies": {
     "@gofynd/fdk-client-javascript": "^1.5.2",
-    "@gofynd/fdk-extension-javascript": "^0.7.12",
+    "@gofynd/fdk-extension-javascript": "git+ssh://git@github.com/gofynd/fdk-extension-javascript.git/#multi-level-storage-support",
     "axios": "^1.7.2",
     "body-parser": "^1.20.2",
     "cookie-parser": "^1.4.6",
     "dotenv": "^16.4.5",
     "express": "^4.19.2",
+    "ioredis": "^5.5.0",
+    "mongoose": "^8.10.1",
     "serve-static": "^1.15.0",
     "sqlite3": "^5.1.7"
   },
