@@ -38,5 +38,5 @@ module.exports = () => {
   if (!request) {
     request = supertest(createTestApp());
   }
-  return { request, mockPlatformClient }
-}
+  return { request, mockPlatformClient };
+};
